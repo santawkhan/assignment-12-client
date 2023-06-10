@@ -1,0 +1,58 @@
+[
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1554214529431-NKKHJX5DYHJAPPVDYWJM/Complete+Guide+to+Photography?format=300w",
+        "name": "Beginners Photography Course",
+        "Instructor_Name": "Robert",
+        "Available seats": 50,
+        "Price": 100
+    },
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1627466430592-YBHRAAG3H6DSEU0AR7NH/Photoshop+Course+for+Photographers+image?format=300w",
+        "name": "Photoshop Course for Photographers",
+        "Instructor_Name": "John",
+        "Available seats": 30,
+        "Price": 120
+    },
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1627466454954-1QKFPU0JQY2R32QJ045Q/Online+Lightroom+Course+image?format=300w",
+        "name": "Complete Guide to Lightroom",
+        "Instructor_Name": "Angina",
+        "Available seats": 20,
+        "Price": 80
+    },
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1554214588773-T8XTVIV7JB1CDAMX31RE/Guide+to+Studio+Lighting?format=300w",
+        "name": "Studio Lighting Course",
+        "Instructor_Name": "Fagin",
+        "Available seats": 20,
+        "Price": 190
+    },
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1554214529431-NKKHJX5DYHJAPPVDYWJM/Complete+Guide+to+Photography?format=300w",
+        "name": "Long Exposure Photography Course",
+        "Instructor_Name": "kane",
+        "Available seats": 15,
+        "Price": 100
+    },
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1554214529431-NKKHJX5DYHJAPPVDYWJM/Complete+Guide+to+Photography?format=300w",
+        "name": "Portrait Retouching Course",
+        "Instructor_Name": "Hisvaski",
+        "Available seats": 60,
+        "Price": 130
+    },
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1632211144956-2OMVM367WOE9IK4JI1L6/Macro+Course+card?format=300w",
+        "name": "Macro Photography Course",
+        "Instructor_Name": "Watson",
+        "Available seats": 70,
+        "Price": 85
+    },
+    {
+        "Image": "https://images.squarespace-cdn.com/content/v1/5824673c2e69cfc8ac1e3cd3/1554214623687-Q6CQXV3WPIXXMAY3VWW1/Complete+Guide+to+Photography+eBook?format=300w",
+        "name": "Complete Guide to Photography eBook",
+        "Instructor_Name": "Crick",
+        "Available seats": 20,
+        "Price": 40
+    }
+]
