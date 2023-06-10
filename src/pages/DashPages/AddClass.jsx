@@ -2,14 +2,30 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useForm } from 'react-hook-form';
 
+const img_hosting_token = import.meta.env.VITE_Img_Upload_token;
 
 const AddClass = () => {
     const { user } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
     const onSubmit = data => {
+        const formData = new FormData();
+        formData.append('image', data.image[0])
 
-        console.log(data)
-    };
+        fetch(img_hosting_url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(imgResponse => {
+                if (imgResponse.success) {
+                    const imgURL = imgResponse.data.display_url;
+                    const { ClassName, instructorEmail, price, seats } = data;
+                    const newItem = { ClassName, status: 'pending', instructorEmail, price: parseFloat(price), seats: parseFloat(seats), image: imgURL }
+                    console.log(newItem)
+                }
+            })
+    }
     console.log(errors);
     return (
         <div > <h3 className="text-center font-serif font-bold text-2xl">Add a Class</h3>
