@@ -13,6 +13,7 @@ import MyClasses from "../pages/DashPages/MyClasses";
 import ManageClasses from "../pages/DashPages/ManageClasses";
 import MySelectedClasses from "../pages/DashPages/MySelectedClasses";
 import EnrolledClasses from "../pages/DashPages/EnrolledClasses";
+import Payment from "../pages/Payment/Payment";
 
 
 
@@ -72,6 +73,10 @@ export const router = createBrowserRouter([
                         path: 'enrolled',
                         element: <EnrolledClasses></EnrolledClasses>
                     },
+                    {
+                        path: 'pay',
+                        element: <Payment></Payment>
+                    }
                 ]
             },
 
