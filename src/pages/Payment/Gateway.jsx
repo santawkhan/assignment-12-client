@@ -4,7 +4,7 @@ import { useContext, useEffect } from "react";
 import { useState } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { AuthContext } from "../../providers/AuthProvider";
-import './Gateway.css';
+
 import Swal from "sweetalert2";
 
 

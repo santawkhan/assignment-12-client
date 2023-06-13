@@ -9,7 +9,7 @@ const Classes = () => {
     });
     const approvedClasses = courses.filter(item => item.status === 'approved')
     return (
-        <div className="py-32">
+        <div className="py-32 grid md:grid-cols-3">
             {
                 approvedClasses.map(approvedClass => <ClassCard key={approvedClass._id} approvedClass={approvedClass} refetch={refetch} ></ClassCard>)}
         </div>
