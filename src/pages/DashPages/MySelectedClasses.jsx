@@ -1,9 +1,38 @@
 import { Link } from "react-router-dom";
 import useSelecetedClass from "../../hooks/useSelecetedClass";
+import Swal from "sweetalert2";
 
 
 const MySelectedClasses = () => {
-    const [Items] = useSelecetedClass();
+    const [Items, refetch] = useSelecetedClass();
+    const handleDelete = item => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/carts/${item._id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+    }
     return (
         <div>
             <table className="table w-full">
@@ -44,7 +73,7 @@ const MySelectedClasses = () => {
                             <td>
                                 {item.Enrolled}
                             </td>
-                            <td><button>Delete</button></td>
+                            <td><button onClick={() => handleDelete(item)}>Delete</button></td>
                             <td><Link to="/dash/pay"><button>Pay</button></Link></td>
 
                         </tr>)
