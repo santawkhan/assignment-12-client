@@ -8,11 +8,12 @@ const Banner = () => {
 
             <div className="md:flex justify-center bg-slate-500 bg-opacity-40 items-center py-20    px-36">
                 <div> <img className='rounded w-2/3' src={banner} alt="" /> </div>
-                <div className="md:ml-10">
+                <div className="md:ml-10" data-aos="fade-up"
+                    data-aos-anchor-placement="bottom-center">
 
-                    <p className="uppercase">LOVE PHOTOGRAPHY?</p>
-                    <p> Digital Photography School has what you need to take your photography to the next level. We offer daily tips, resources and free tutorials that will help you get the most out your camera and create stunning photos</p>
-                    <button className="btn btn-outline border-0 border-b-4 mt-6 uppercase">Start here</button>
+                    <p data-aos="flip-left" className="uppercase text-orange-400 font-serif font-bold text-xl ">Online Photography Classes</p>
+                    <p>Find what fascinates you as you explore these Photography classes.</p>
+                    <button className="btn btn-outline border-0 border-b-4 mt-6 uppercase">Start For here</button>
                 </div>
             </div>
         </div>
@@ -20,3 +21,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+

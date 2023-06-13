@@ -13,6 +13,7 @@ const MySelectedClasses = () => {
                         <th>#</th>
                         <th>Class image</th>
                         <th>Class Name</th>
+                        <th>Price</th>
                         <th>Total Enrolled Students</th>
                         <th>Delete Class</th>
                         <th>Pay</th>
@@ -39,7 +40,7 @@ const MySelectedClasses = () => {
                             <td>
                                 {item.ClassName}
                             </td>
-
+                            <td>{item.price}</td>
                             <td>
                                 {item.Enrolled}
                             </td>

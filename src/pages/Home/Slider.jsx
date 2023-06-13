@@ -50,8 +50,8 @@ const Slider = () => {
                             <div> <img className='rounded w-2/3' src={slider2} alt="" /> </div>
                             <div className="md:ml-10">
 
-                                <p className="uppercase">LOVE PHOTOGRAPHY?</p>
-                                <p> Digital Photography School has what you need to take your photography to the next level. We offer daily tips, resources and free tutorials that will help you get the most out your camera and create stunning photos</p>
+                                <p className="uppercase">Photo Marketplace</p>
+                                <p> Amateur and professional photographers, Divi is the tool you should consider if you are ready to take your project to new heights. With practicality, high adaptability, and sophistication, you can bring any page you fancy into being</p>
                                 <button className="btn btn-outline border-0 border-b-4 mt-6 uppercase">Start here</button>
                             </div>
                         </div>
@@ -63,8 +63,8 @@ const Slider = () => {
                             <div> <img className='rounded w-2/3' src={slider3} alt="" /> </div>
                             <div className="md:ml-10">
 
-                                <p className="uppercase">LOVE PHOTOGRAPHY?</p>
-                                <p> Digital Photography School has what you need to take your photography to the next level. We offer daily tips, resources and free tutorials that will help you get the most out your camera and create stunning photos</p>
+                                <p className="uppercase">Load Appearance For Your Brand</p>
+                                <p> Like Jevelin, you know the outcome will appeal to the eye with stunning web design. It is a website that we are speaking about when mentioning the outcome. Jevelin comes with a dope demo carefully designed and crafted for photographers</p>
                                 <button className="btn btn-outline border-0 border-b-4 mt-6 uppercase">Start here</button>
                             </div>
                         </div>
@@ -76,39 +76,14 @@ const Slider = () => {
                             <div> <img className='rounded w-2/3' src={slider4} alt="" /> </div>
                             <div className="md:ml-10">
 
-                                <p className="uppercase">LOVE PHOTOGRAPHY?</p>
+                                <p className="uppercase">creative photography studio</p>
                                 <p> Digital Photography School has what you need to take your photography to the next level. We offer daily tips, resources and free tutorials that will help you get the most out your camera and create stunning photos</p>
                                 <button className="btn btn-outline border-0 border-b-4 mt-6 uppercase">Start here</button>
                             </div>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    <div className="sliderbg">
-                        <div className="md:flex justify-center bg-slate-500 bg-opacity-40 items-center  py-20    px-36">
-                            <div> <img className='rounded w-2/3' src={slider5} alt="" /> </div>
-                            <div className="md:ml-10">
 
-                                <p className="uppercase">LOVE PHOTOGRAPHY?</p>
-                                <p> Digital Photography School has what you need to take your photography to the next level. We offer daily tips, resources and free tutorials that will help you get the most out your camera and create stunning photos</p>
-                                <button className="btn btn-outline border-0 border-b-4 mt-6 uppercase">Start here</button>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="sliderbg">
-                        <div className="md:flex justify-center bg-slate-500 bg-opacity-40 items-center  py-20    px-36">
-                            <div> <img className='rounded w-2/3' src={slider6} alt="" /> </div>
-                            <div className="md:ml-10">
-
-                                <p className="uppercase">LOVE PHOTOGRAPHY?</p>
-                                <p> Digital Photography School has what you need to take your photography to the next level. We offer daily tips, resources and free tutorials that will help you get the most out your camera and create stunning photos</p>
-                                <button className="btn btn-outline border-0 border-b-4 mt-6 uppercase">Start here</button>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
 
             </Swiper>
         </>
