@@ -15,6 +15,8 @@ import MySelectedClasses from "../pages/DashPages/MySelectedClasses";
 import EnrolledClasses from "../pages/DashPages/EnrolledClasses";
 import Payment from "../pages/Payment/Payment";
 
+import Feedback from "../pages/Home/Feedback";
+
 
 
 
@@ -76,7 +78,11 @@ export const router = createBrowserRouter([
                     {
                         path: 'pay',
                         element: <Payment></Payment>
-                    }
+                    },
+                    {
+                        path: 'feedback',
+                        element: <Feedback></Feedback>
+                    },
                 ]
             },
 

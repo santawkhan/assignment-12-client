@@ -8,7 +8,7 @@ const EnrolledClasses = () => {
     const { data: Items = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['Items'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/enrolled?email=${user?.email}`);
+            const res = await fetch(`https://summer-camp-server-santawkhan.vercel.app/enrolled?email=${user?.email}`);
             return res.json();
         }
     })
@@ -18,9 +18,9 @@ const EnrolledClasses = () => {
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Class image</th>
+
                     <th>Class Name</th>
-                    <th>Instructor Name</th>
+                    <th>TranssactionId</th>
                     <th>Instructor Email</th>
 
                 </tr>
@@ -34,13 +34,14 @@ const EnrolledClasses = () => {
                         <td>
                             <div className="flex items-center space-x-3">
 
-                                <div>
-                                    {/* <div className="font-bold">{item?.ClassName}</div> */}
-                                </div>
+                                {course.ClassName[0]}
                             </div>
                         </td>
                         <td>
-                            {course.ClassName}
+                            {course.transactionId}
+                        </td>
+                        <td>
+                            {course.email}
                         </td>
 
 

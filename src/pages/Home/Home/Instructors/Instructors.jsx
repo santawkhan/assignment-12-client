@@ -7,7 +7,7 @@ import { AuthContext } from "../../../../providers/AuthProvider";
 const Instructors = () => {
     const { user } = useContext(AuthContext)
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await fetch('http://localhost:5000/users');
+        const res = await fetch('https://summer-camp-server-santawkhan.vercel.app/users');
         return res.json();
     });
     const instructors = users.filter(item => item.role === 'instructor')
@@ -32,7 +32,7 @@ const Instructors = () => {
                                 <th>{index + 1}</th>
                                 <td>{instructor.name}</td>
                                 <td>{instructor.email}</td>
-                                <td><img src={instructor.photo} alt="" /></td>
+                                <td><img src={instructor.photo} className="w-20 rounded-lg" alt="" /></td>
 
 
                             </tr>)

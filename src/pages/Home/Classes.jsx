@@ -4,7 +4,7 @@ import ClassCard from "./Home/ClassCard";
 
 const Classes = () => {
     const { data: courses = [], refetch } = useQuery(['courses'], async () => {
-        const res = await fetch('http://localhost:5000/courses');
+        const res = await fetch('https://summer-camp-server-santawkhan.vercel.app/courses');
         return res.json();
     });
     const approvedClasses = courses.filter(item => item.status === 'approved')

@@ -8,7 +8,7 @@ const useData = () => {
     const { data: Items = [], isLoading: loading, refetch } = useQuery({
         queryKey: ['Items'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/Course?email=${user?.email}`);
+            const res = await fetch(`https://summer-camp-server-santawkhan.vercel.app/Course?email=${user?.email}`);
             return res.json();
         }
     })

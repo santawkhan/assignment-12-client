@@ -16,7 +16,7 @@ const ClassCard = ({ approvedClass, refetch }) => {
         console.log(approvedClass);
         if (user && user.email) {
             const cartItem = { ClassItemId: _id, ClassName, seats, image, price, email: user.email }
-            fetch('http://localhost:5000/selectedClass', {
+            fetch('https://summer-camp-server-santawkhan.vercel.app/selectedClass', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

@@ -1,3 +1,4 @@
+import { Hinge } from 'react-awesome-reveal'
 import ins1 from '../../../assets/images/ins1.jpg'
 import ins2 from '../../../assets/images/ins2.jpg'
 import ins3 from '../../../assets/images/ins3.jpg'
@@ -19,7 +20,7 @@ const PopularInstructors = () => {
                                 Instructor name:Jack
 
                             </h2>
-                            <p>Enrolled Students:10</p>
+                            <p>Enrolled Students:9</p>
 
                         </div>
                     </div>
@@ -91,7 +92,7 @@ const PopularInstructors = () => {
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 

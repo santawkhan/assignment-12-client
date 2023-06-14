@@ -79,7 +79,7 @@ const Gateway = ({ price, ClassName, id, Items, }) => {
 
         if (paymentIntent.status === 'succeeded') {
             setTransactionId(paymentIntent.id);
-            // fetch(`http://localhost:5000/users/seats/${id}`, {
+            // fetch(`https://summer-camp-server-santawkhan.vercel.app/users/seats/${id}`, {
             //     method: 'PATCH'
             // })
             //     .then(res => res.json())

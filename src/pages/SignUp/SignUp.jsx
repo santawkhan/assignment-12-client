@@ -20,9 +20,9 @@ const SignUp = () => {
         if (data.password !== confirmPassword) {
             // alert("Passwords do not match!");
             return Swal.fire(
-                'The Internet?',
-                'That thing is still around?',
-                'question'
+                'Password dont match',
+
+
             )
         }
 
@@ -33,7 +33,7 @@ const SignUp = () => {
                 updateUserProfile(data.name, data.PhotoURL)
                     .then(() => {
                         const savedUser = { name: data.name, photo: data.PhotoURL, email: data.email }
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://summer-camp-server-santawkhan.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -95,7 +95,19 @@ const SignUp = () => {
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" {...register("password", { required: true })} name='password' placeholder="password" className="input input-bordered" required />
+                                    <input type="password"  {...register("password", {
+                                        required: true,
+                                        minLength: 6,
+                                        maxLength: 20,
+                                        pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/
+                                    })} placeholder="password" className="input input-bordered" />
+                                    {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
+                                    {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
+                                    {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must be less than 20 characters</p>}
+                                    {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one Uppercase one lower case, one number and one special character.</p>}
+                                    <label className="label">
+                                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    </label>
 
                                 </div>
                                 <div className="form-control">

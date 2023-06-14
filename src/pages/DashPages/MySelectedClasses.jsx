@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import useSelecetedClass from "../../hooks/useSelecetedClass";
 import Swal from "sweetalert2";
+import { FaTrashAlt } from "react-icons/fa";
 
 
 const MySelectedClasses = () => {
@@ -16,7 +17,7 @@ const MySelectedClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item._id}`, {
+                fetch(`https://summer-camp-server-santawkhan.vercel.app/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -43,7 +44,7 @@ const MySelectedClasses = () => {
                         <th>Class image</th>
                         <th>Class Name</th>
                         <th>Price</th>
-                        <th>Total Enrolled Students</th>
+
                         <th>Delete Class</th>
                         <th>Pay</th>
                     </tr>
@@ -69,12 +70,10 @@ const MySelectedClasses = () => {
                             <td>
                                 {item.ClassName}
                             </td>
-                            <td>{item.price}</td>
-                            <td>
-                                {item.Enrolled}
-                            </td>
-                            <td><button onClick={() => handleDelete(item)}>Delete</button></td>
-                            <td><Link to="/dash/pay"><button>Pay</button></Link></td>
+                            <td>${item.price}</td>
+
+                            <td><button onClick={() => handleDelete(item)}><FaTrashAlt></FaTrashAlt></button></td>
+                            <td><Link to="/dash/pay"><button className="btn btn-square btn-outline">Pay</button></Link></td>
 
                         </tr>)
                     }
