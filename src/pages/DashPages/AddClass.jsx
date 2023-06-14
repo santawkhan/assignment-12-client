@@ -18,19 +18,7 @@ const AddClass = () => {
             method: 'POST',
             body: formData
         })
-            .then(res => res.json())
-            .then(imgResponse => {
-                if (imgResponse.success) {
-                    const imgURL = imgResponse.data.display_url;
-                    const { ClassName, email, instructorName, price, seats } = data;
-                    const newItem = { ClassName, status: 'pending', Enrolled: 0, instructorName, email, price: parseFloat(price), seats: parseFloat(seats), image: imgURL }
-                    console.log(newItem)
-                    axiosSecure.post('/courses', newItem)
-                        .then(data => {
-                            console.log(data.data)
-                        })
-                }
-            })
+
     }
     console.log(errors);
     return (
