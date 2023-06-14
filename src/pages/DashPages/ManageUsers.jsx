@@ -67,6 +67,17 @@ const ManageUsers = () => {
                         </tr>
                     </thead>
                     <tbody>
+                        {
+                            users.map((user, index) => <tr key={user._id}>
+                                <th>{index + 1}</th>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+                                <td>{user.role}</td>
+                                <td><button onClick={() => handleMakeAdmin(user)}><FaUserShield /></button></td>
+                                <td><button onClick={() => handleMakeInstructor(user)}><FaUserAlt /></button></td>
+
+                            </tr>)
+                        }
 
 
                     </tbody>
