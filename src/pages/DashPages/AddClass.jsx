@@ -34,16 +34,9 @@ const AddClass = () => {
     }
     console.log(errors);
     return (
-        <div > <h3 className="text-center font-serif font-bold text-2xl">Add a Class</h3>
-            <form onSubmit={handleSubmit(onSubmit)} className="grid md:grid-cols-2 gap-3">
-                <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text font-semibold">Class name</span>
-                    </label>
-                    <input type="text" placeholder="Type here"
-                        {...register("ClassName", { required: true, maxLength: 80 })} className="input input-bordered w-full max-w-xs" />
+       
 
-                </div>
+                </div >
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text font-semibold">Add Image</span>
@@ -81,8 +74,8 @@ const AddClass = () => {
 
                 </div>
                 <input className="btn btn-outline text-center" type="submit" value="Add This" />
-            </form>
-        </div>
+            </form >
+        </div >
     );
 };
 
